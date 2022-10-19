@@ -17,7 +17,7 @@ namespace AgendaApp
         }
         public override string ToString()
         {
-            return $"{nome} - {email} - {fone}";
+            return $"Nome = {nome} \n   Email = {email} \n   Fone = {fone}";
         }
     }
 }
