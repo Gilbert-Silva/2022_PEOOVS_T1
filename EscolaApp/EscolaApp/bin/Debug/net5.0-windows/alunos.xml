@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfAluno xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Aluno>
+    <Id>1</Id>
+    <Nome>Marcílio</Nome>
+    <Matricula>20201014040001</Matricula>
+    <Email>marcilio@email.com</Email>
+  </Aluno>
+  <Aluno>
+    <Id>2</Id>
+    <Nome>Marcio</Nome>
+    <Matricula>20201014040002</Matricula>
+    <Email>marcio@email.com</Email>
+  </Aluno>
+</ArrayOfAluno>
