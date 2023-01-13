@@ -14,6 +14,11 @@ namespace EscolaApp
         public static void Inserir(Aluno t)
         {
             Abrir();
+            // Procurar o maior Id
+            int id = 0;
+            foreach (Aluno obj in alunos)
+                if (obj.Id > id) id = obj.Id;
+            t.Id = id + 1;
             alunos.Add(t);
             Salvar();
         }
@@ -32,6 +37,7 @@ namespace EscolaApp
                     obj.Nome = t.Nome;
                     obj.Matricula = t.Matricula;
                     obj.Email = t.Email;
+                    obj.IdTurma = t.IdTurma;
                 }
             Salvar();
         }
@@ -75,5 +81,20 @@ namespace EscolaApp
             // Fecha o arquivo
             f.Close();
         }
+        public static void Matricular(Aluno a, Turma t)
+        {
+            a.IdTurma = t.Id;
+            Atualizar(a);
+        }
+        public static List<Aluno> Listar(Turma t)
+        {
+            Abrir();
+            // Percorrer a lista de alunos procurando o id da turma informada
+            List<Aluno> diario = new List<Aluno>();
+            foreach (Aluno obj in alunos)
+                if (obj.IdTurma == t.Id) diario.Add(obj);
+            return diario;
+        }
+
     }
 }
